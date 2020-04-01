@@ -11,7 +11,7 @@ export class NavbarComponent implements OnInit {
   showSideBar: boolean;
 
   @Output()
-  showSideBarChage: EventEmitter<boolean> = new EventEmitter<boolean>;
+  showSideBarChange: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -19,6 +19,6 @@ export class NavbarComponent implements OnInit {
   }
   afficherSideBar(){
     this.showSideBar = !this.showSideBar;
-    this.showSideBarChage.emit(this.showSideBar);
+    this.showSideBarChange.emit(this.showSideBar);
   }
 }
